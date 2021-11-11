@@ -2,11 +2,11 @@ package com.example.study.model;
 
 public class SearchParam {
 
-    // { "account" : "", "email" : "", "page" : 0}
-
     private String account;
     private String email;
     private int page;
+
+    // { "account" : "", "email" : "", "page" : 0}
 
     public String getAccount() {
         return account;
