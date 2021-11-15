@@ -2,12 +2,14 @@ package com.example.study.model.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity // == table
 //@Table(name = "user") // DB의 이름과 같다면 생략 가능
 public class User {
@@ -23,7 +25,4 @@ public class User {
     private LocalDateTime updatedAt;
     private String updatedBy;
 
-    public User() {
-
-    }
 }
