@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -24,5 +25,9 @@ public class User {
     private String createdBy;
     private LocalDateTime updatedAt;
     private String updatedBy;
+
+    // 1 (User) : N (OrderDetail)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user" /*OrderDetail에 있는 user*/)
+    private List<OrderDetail> orderDetailList;
 
 }
