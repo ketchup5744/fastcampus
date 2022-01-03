@@ -39,7 +39,9 @@ public class UserRepositoryTest extends StudyApplicationTests {
     @Test
     @Transactional
     public void read(/*Long id*/) {
-        Optional<User> user = userRepository.findById(8L);
+
+        // select * from user where id = ?
+        Optional<User> user = userRepository.findByAccount("TestUser03"); //findById(8L)
 
         user.ifPresent(selectUser -> {
 //            System.out.println("user = " + selectUser);
